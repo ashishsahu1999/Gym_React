@@ -1,0 +1,127 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 500px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.signup-container{
+  margin-top: 150px;
+}
+
+.signup-container h1{
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Flex container for aligning items in a row */
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Adjust gap between items as needed */
+}
+
+.form-row > .form-group {
+  flex: 1;
+  min-width: 250px; /* Ensure a minimum width for better layout on small screens */
+}
+
+.form-group input[type="email"],
+.form-group input[type="tel"] {
+  width: 100%; /* Ensures the inputs take full width */
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%; /* Ensures inputs and selects take up the full width of their container */
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+/* Specific styles for date input */
+.form-group input[type="date"] {
+  width: 100%; /* Ensures the date input takes up the full width available */
+}
+
+/* Styles for password fields to be on the same line */
+.password-row {
+  display: flex;
+  gap: 20px; /* Adjust gap between fields as needed */
+}
+
+.password-row .form-group {
+  flex: 1; 
+  margin-bottom: 20px;
+}
+
+.form-group button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  color: #fff;
+  background: linear-gradient(90deg, #FF1414 20%, #f70000);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.form-group button:hover {
+  background: linear-gradient(90deg, #f70000 20%, #FF1414);
+}
+
+.form-group .alternate-text {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #777;
+}
+
+.link-separator {
+  margin: 0 60px;
+}
+
+
+@media (max-width: 600px) {
+  .container {
+    max-width: 90%;
+  }
+
+  /* Adjustments for small screens */
+  .password-row {
+    flex-direction: column; /* Stack password fields vertically on small screens */
+  }
+
+  .form-row {
+    flex-direction: column; /* Stack fields vertically on small screens */
+  }
+}
